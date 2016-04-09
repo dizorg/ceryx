@@ -9,7 +9,7 @@ DEBUG = True
 if os.getenv('CERYX_DEBUG', '').lower() in ['0', 'no', 'false']:
     DEBUG = False
 
-API_BIND_HOST = os.getenv('CERYX_API_HOST', '127.0.0.1')
+API_BIND_HOST = os.getenv('CERYX_API_HOST', '192.168.99.100')
 API_BIND_PORT = os.getenv('CERYX_API_PORT', 5555)
 
 SERVER_NAME = os.getenv('CERYX_SERVER_NAME')
@@ -18,6 +18,6 @@ if SECRET_KEY:
     with open(SECRET_KEY, 'r') as f:
         SECRET_KEY = f.read()
 
-REDIS_HOST = os.getenv('CERYX_REDIS_HOST', '127.0.0.1')
+REDIS_HOST = os.getenv('CERYX_REDIS_HOST', '192.168.99.100')
 REDIS_PORT = os.getenv('CERYX_REDIS_PORT', 6379)
 REDIS_PREFIX = os.getenv('CERYX_REDIS_PREFIX', 'ceryx')
